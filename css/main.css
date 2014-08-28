@@ -6434,9 +6434,9 @@ td.visible-print {
   animation-duration: .75s;
 }
 
-.m-scene .scene_element--fadeInZ {
-  -webkit-animation-name: fadeInZ;
-  animation-name: fadeInZ;
+.m-scene .scene_element--fadeInScale {
+  -webkit-animation-name: fadeInScale;
+  animation-name: fadeInScale;
 }
 
 .m-scene.is-exiting .scene_element {
@@ -6500,37 +6500,31 @@ td.visible-print {
   }
 }
 
-@-webkit-keyframes fadeInZ {
+@-webkit-keyframes fadeInScale {
   0% {
     opacity: 0;
-  }
-
-  5% {
-    -webkit-transform: perspective(400) translate3d(0, 20%, -1000px);
-    transform: perspective(400) translate3d(0, 20%, -1000px);
+    -webkit-transform: scale(-1);
+    transform: scale(-1);
   }
 
   100% {
     opacity: 1;
-    -webkit-transform: perspective(0) translate3d(0, 0, 0);
-    transform: perspective(0) translate3d(0, 0, 0);
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }
 
-@keyframes fadeInZ {
+@keyframes fadeInScale {
   0% {
     opacity: 0;
-  }
-
-  5% {
-    -webkit-transform: perspective(400) translate3d(0, 20%, -1000px);
-    transform: perspective(400) translate3d(0, 20%, -1000px);
+    -webkit-transform: scale(-1);
+    transform: scale(-1);
   }
 
   100% {
     opacity: 1;
-    -webkit-transform: perspective(0) translate3d(0, 0, 0);
-    transform: perspective(0) translate3d(0, 0, 0);
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }
 

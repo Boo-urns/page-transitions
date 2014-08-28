@@ -17,8 +17,8 @@
   animation-duration: .75s;
 }
 
-.m-scene .scene_element--fadeInZ {
-	animation-name: fadeInZ;
+.m-scene .scene_element--fadeInScale {
+	animation-name: fadeInScale;
 }
 
 .m-scene.is-exiting .scene_element {
@@ -56,17 +56,14 @@
   }
 }
 
-@keyframes fadeInZ {
+@keyframes fadeInScale {
 	0% {
 		opacity: 0;
-		
-	}
-	5% {
-		transform: perspective(400) translate3d(0, 20%, -1000px);
+		transform: scale(-1);
 	}
 	100% {
 		opacity: 1;
-		transform: perspective(0) translate3d(0, 0, 0);
+		transform: scale(1);
 	}
 }
 
