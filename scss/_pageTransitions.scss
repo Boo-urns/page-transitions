@@ -1,0 +1,82 @@
+/*
+ * CSS Animations
+ * Don't forget to add vendor prefixes!
+ */
+.m-scene .scene_element {
+  animation-duration: 0.25s;
+  transition-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+.m-scene .scene_element--fadein {
+  animation-name: fadeIn;
+}
+
+.m-scene .scene_element--fadeUp {
+  animation-name: fadeUp;
+  animation-duration: .75s;
+}
+
+.m-scene .scene_element--fadeInZ {
+	animation-name: fadeInZ;
+}
+
+.m-scene.is-exiting .scene_element {
+  animation-direction: alternate-reverse;
+}
+
+
+
+.jumbotron h1 {
+	color: #f35626;
+	background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 60s infinite linear;
+}
+
+
+
+/*
+ * Keyframes
+ */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  0% { 
+  	opacity: 0; 
+  	transform: translateY(15%);
+  }
+  100% { 
+  	opacity: 1; 
+  	transform: translateY(0);
+  }
+}
+
+@keyframes fadeInZ {
+	0% {
+		opacity: 0;
+		
+	}
+	5% {
+		transform: perspective(400) translate3d(0, 20%, -1000px);
+	}
+	100% {
+		opacity: 1;
+		transform: perspective(0) translate3d(0, 0, 0);
+	}
+}
+
+
+@keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
