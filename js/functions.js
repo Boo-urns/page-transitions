@@ -3,6 +3,8 @@
   'use strict';
   var $body = $('html, body'),
       content = $('#main').smoothState({
+        prefetch: true,
+        pageCacheSize: 4,
         // Runs when a link has been activated
         onStart: {
           duration: 250, // Duration of our animation

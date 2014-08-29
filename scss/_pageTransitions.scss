@@ -8,23 +8,26 @@
   animation-fill-mode: both;
 }
 
-.m-scene .scene_element--fadein {
+.scene_element--fadein {
   animation-name: fadeIn;
 }
 
-.m-scene .scene_element--fadeUp {
+.scene_element--fadeUp {
   animation-name: fadeUp;
   animation-duration: .75s;
 }
 
-.m-scene .scene_element--fadeInScale {
+.scene_element--fadeInScale {
 	animation-name: fadeInScale;
+}
+
+.scene_element--fadeinRight {
+	animation-name: fadeInRight;
 }
 
 .m-scene.is-exiting .scene_element {
   animation-direction: alternate-reverse;
 }
-
 
 
 .jumbotron h1 {
@@ -35,6 +38,21 @@
 	-webkit-animation: hue 60s infinite linear;
 }
 
+.secondary {
+	.jumbotron {
+		background-color: #333;
+		background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+		-webkit-animation: hue 60s infinite linear;
+
+		h1 {
+			color: #fff;
+			text-shadow: 2px 2px 2px #333;
+			background-image: none;
+			-webkit-background-clip: none;
+	 		-webkit-text-fill-color: #fff;
+		}
+	}
+}
 
 
 /*
@@ -48,11 +66,22 @@
 @keyframes fadeUp {
   0% { 
   	opacity: 0; 
-  	transform: translateY(15%);
+  	transform: translate3d(0, 15%, 0);
   }
   100% { 
   	opacity: 1; 
-  	transform: translateY(0);
+  	transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% { 
+  	opacity: 0; 
+  	transform: translate3d(100%, 0, 0);
+  }
+  100% { 
+  	opacity: 1; 
+  	transform: translate3d(0, 0, 0);
   }
 }
 
